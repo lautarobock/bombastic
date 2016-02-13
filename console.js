@@ -1,15 +1,16 @@
-
-console.log(process.argv);
-
 var Sensor = require('./sensor.js');
 var Reader = require('./reader.js');
 
-var reader = new Reader([
-    new Sensor('./etc/mock1'),
-    new Sensor('./etc/mock2')
-]);
+var sensors = [];
+
+for ( var i=2; i<process.argv.length; i++ ) {
+    sensors.push(new Sensor(process.argv[i]));
+}
+
+var reader = new Reader(sensors);
 
 setInterval(function() {
-    console.log('0', reader.get(0));
-    console.log('1', reader.get(1));
+    for ( var i=0;i<sensors.length; i++ ) {
+        console.log('Sensor', i, reader.get(i));
+    }
 },1000);
