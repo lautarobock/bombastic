@@ -1,0 +1,22 @@
+{
+  "name": "bombastic",
+  "version": "1.0.0",
+  "description": "Modulo web de control de sensor de temperatura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lautarobock/bombastic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lautarobock/bombastic/issues"
+  },
+  "homepage": "https://github.com/lautarobock/bombastic#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
