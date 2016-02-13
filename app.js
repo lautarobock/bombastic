@@ -9,7 +9,9 @@ app.get('/pepe', function(req, res) {
 });
 
 
-app.listen(3000);
+app.listen(3000,function() {
+    console.log('Express server listening on port 3000');
+});
 // var server = http.createServer(app).listen(app.get('port'), function(){
 //     // log.info('Express server listening on port ' + app.get('port'));
 //   console.log('Express server listening on port ' + app.get('port'));
